@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Frontend тренажёр</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Frontend тренажёр</h1>
+      <p>Блоки по JavaScript, React, Next.js и смежным темам: в каждом тесты с разбором, документация и по 6 вариантов вопроса. К каждому заданию есть блок «Документация» с объяснением, как это работает и почему, а под ним «Закрепление»: 6 вариантов вопросов по той же теме: вы сами выбираете вариант и можете вернуться к любому позже. Варианты ответов внутри вопроса перемешиваются. Прогресс хранится в этом браузере.</p>
+    </div>
+    <div class="meter">
+      <div class="meter-row"><span>Пройдено</span><strong id="meter-num">0 / 0</strong></div>
+      <div class="bar" role="progressbar" aria-label="Общий прогресс" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="meter-bar"><i></i></div>
+      <div class="meter-row meter-sub"><span>Закрепление: освоено вариантов</span><strong id="pmeter-num">0 / 0</strong></div>
+      <button type="button" class="reset" id="reset">Сбросить прогресс</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="side" id="topics" aria-label="Темы"></nav>
+    <main>
+      <div class="filters">
+        <div class="seg" role="group" aria-label="Тип заданий" id="kinds"></div>
+        <label class="check"><input type="checkbox" id="only-open"> Только нерешённые</label>
+      </div>
+      <div id="list"></div>
+    </main>
+  </div>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
